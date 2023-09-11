@@ -7,20 +7,20 @@ function App() {
     let obj ={
       resume : ["MonK"],
       interest : ["football","gym","finance"],
-      skills : ["HTML CSS", "Javascript", "React"],
-      education : ["APS","AFS","NHCE"]
+      skills : ["JS","React","CSS"],
+      education : ["APS","AFS","NHCE"],
     }
   return (
     <>
-    <Resume
-    name = {obj.resume}
+    
+    {obj.resume.length!==0?<Resume name={obj.resume}></Resume>:null}
+    
+    {obj.interest.length!==0?<Interest interest ={obj.interest}></Interest>:null}
+    {obj.skills.length!==0?<Skills skills={obj.skills}/>: null }
+    <Education
+    education={obj.education}
     />
-    <Interest
-    name ={obj.interest }/>
-    <Skills
-    skills ={obj.skills}
-    />
-    <Education/>
+
     </>
   );
 }

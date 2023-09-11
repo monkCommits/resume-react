@@ -1,9 +1,10 @@
-export default function Resume({name}){
+import './resume.css'
+
+export default function Resume({name,interest}){
     return(
-        <>
-    <h1>Resume</h1>
+    <div className='main-heading'>
+    <h1 >Resume</h1>
     <h2>{name}</h2>
-    <hr></hr>
-    </>
+    </div>
     )
 }
